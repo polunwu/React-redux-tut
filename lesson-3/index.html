@@ -24,11 +24,19 @@
   <script type='text/babel'>
     {/* Create a Component*/ }
     class App extends React.Component {
+      constructor() {
+        super();
+        this.state = {
+          name: "Rick",
+          age: 60
+        }
+      }
       render() {
         return (
           <div className="app-content">
             <h1>Hey, React</h1>
-            <p>{Math.random() * 10}</p>
+            <p>My Name is : {this.state.name}</p>
+            <p>My Age id : {this.state.age}</p>
           </div>
         );
       }
