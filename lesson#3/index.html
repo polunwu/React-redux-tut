@@ -13,7 +13,26 @@
 </head>
 
 <body>
+  <div id="app">
 
+  </div>
+
+  <!-- Load Babel -->
+  <!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type='text/babel'>
+    class App extends React.Component {
+      render() {
+        return (
+          <div className="app-content">
+            <h1>Hey, React</h1>
+          </div>
+        );
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById("app"));
+  </script>
 </body>
 
 </html>
