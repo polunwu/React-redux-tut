@@ -24,19 +24,27 @@
   <script type='text/babel'>
     {/* Create a Component*/ }
     class App extends React.Component {
-      constructor() {
-        super();
-        this.state = {
-          name: "Rick",
-          age: 60
-        }
+      state = {
+        name: "Rick",
+        age: 60
+      }
+      handleClick(e) {
+        console.log(e.target);
+      }
+      handleMouseOver(e) {
+        console.log(e.target);
+      }
+      handleCopy(e) {
+        console.log(e);
       }
       render() {
         return (
           <div className="app-content">
             <h1>Hey, React</h1>
-            <p>My Name is : {this.state.name}</p>
-            <p>My Age id : {this.state.age}</p>
+            <p>My Name is : {this.state.name}, and I an {this.state.age}</p>
+            <button onClick={this.handleClick}>Click Me</button>
+            <button onMouseOver={this.handleMouseOver}>Hover ME</button>
+            <p onCopy={this.handleCopy}>What we think, we become</p>
           </div>
         );
       }
