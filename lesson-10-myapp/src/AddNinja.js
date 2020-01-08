@@ -7,7 +7,7 @@ class AddNinja extends React.Component {
     belt: ""
   }
   handleChange = (e) => {
-    this.state.setState({
+    this.setState({
       [e.target.id]: e.target.value
     });
   }
@@ -18,13 +18,13 @@ class AddNinja extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={}>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="name">Name:</label>
-          <input type="text" id="name" onChange={this.handleChange} />
+          <input type="text" id="name" onChange={this.handleChange} required />
           <label htmlFor="age">Age:</label>
-          <input type="text" id="age" onChange={this.handleChange} />
+          <input type="text" id="age" onChange={this.handleChange} required />
           <label htmlFor="belt">Belt:</label>
-          <input type="text" id="belt" onChange={this.handleChange} />
+          <input type="text" id="belt" onChange={this.handleChange} required />
           <button>Submit</button>
         </form>
       </div>
