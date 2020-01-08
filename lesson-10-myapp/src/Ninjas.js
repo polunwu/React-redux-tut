@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Ninjas = (props) => {
+const Ninjas = ({ ninjas }) => {
 
-  const { ninjas } = props;
   const ninjaList = ninjas.map(ninja => {
     return (
       <div className="Ninja" key={ninja.id}>
