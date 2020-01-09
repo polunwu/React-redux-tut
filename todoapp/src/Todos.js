@@ -4,7 +4,7 @@ const Todos = (props) => {
   const todoList = props.todos.length ? (
     props.todos.map(todo => {
       return (
-        <div className="center collection-item" key={todo.id}>
+        <div className="collection-item" key={todo.id}>
           <a href="#!"><span onClick={() => { props.deleteTodo(todo.id) }}>{todo.content}</span></a>
         </div>)
     })
