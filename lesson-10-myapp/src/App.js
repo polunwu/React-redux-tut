@@ -13,7 +13,6 @@ class App extends React.Component {
   addNinja = (ninja) => {
     ninja.id = Math.random();
     let updatedNinjas = [...this.state.ninjas, ninja];
-    console.log(updatedNinjas);
     this.setState({
       ninjas: updatedNinjas
     });
@@ -23,6 +22,13 @@ class App extends React.Component {
     this.setState({
       ninjas: updatedNinjas
     });
+  }
+  componentDidMount() {
+    console.log('component mounted');
+  }
+  componentDidUpdate(prevProps, prevState) {
+    console.log('component updated');
+    console.log(prevProps, prevState);
   }
   render() {
     return (
