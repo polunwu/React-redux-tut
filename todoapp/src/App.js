@@ -8,12 +8,18 @@ class App extends React.Component {
       { id: 2, content: 'walk my dog' }
     ]
   }
+  deleteTodo = (id) => {
+    const updateTodos = this.state.todos.filter(todo => todo.id !== id);
+    this.setState({
+      todos: updateTodos
+    });
+  }
 
   render() {
     return (
-      <div className="App">
+      <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
       </div>
     );
   }
